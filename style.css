@@ -72,12 +72,13 @@ label {
 }
 
 .form button:hover {
-    background-color: cadetblue;
-    border-color: cadetblue;
+    /* background-color: cadetblue;
+    border-color: cadetblue; */
     
-    transform: rotate(180deg); 
-  
+    /* transform: rotate(360deg);
+    transition: 1s; */
 }
+
 
 .error {
     font-style: italic;
