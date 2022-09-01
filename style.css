@@ -1,0 +1,95 @@
+html{
+    margin: 0;
+    padding-left: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    max-width: 400px;
+    margin-top: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+
+}
+
+h1 {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 400px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 15px;
+     display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: aquamarine;
+
+}
+
+.form {
+    padding-top: 30px;
+    width: 350px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+label {
+    width: 250px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.form button {
+    width: 80px;
+    height: 30px;
+    margin-bottom: 30px;
+    color: black;
+    background-color: blanchedalmond;
+    border-color: blanchedalmond;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.form button:hover {
+    background-color: cadetblue;
+    border-color: cadetblue;
+    
+    transform: rotate(180deg); 
+  
+}
+
+.error {
+    font-style: italic;
+    font-weight: 300;
+    color: tomato;
+    font-weight: 400;
+}
+.mensagem.error{
+    display: none;
+    font-size: small;
+}
+
+.mensagem.error.on {
+    display: block;
+}
