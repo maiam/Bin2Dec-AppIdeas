@@ -12,11 +12,29 @@
 </head>
 <body>
   
-    <header>
+    <header class="l-header">
         <h1>Bin2Dec</h1>
       </header>
 
-      <main>
+
+      <div class="l-main">
+        <div class="wrapper">
+            <label for="binario">
+                    Binário
+                    <input type="text" name="binario" id="input-binario">
+            </label>
+            <div class="wrapper-btn">
+                <button type="button" id="btn-zero">0</button>
+                <button type="button" id="btn-one">1</button>    
+            </div>
+            <label for="decimal">
+                Decimal
+                <input type="text" name="decimal" id="input-decimal">
+            </label>
+          </div>    
+      </div>
+
+      <!-- <main class="">
           <Form class="form">
             <label for="inputBinarios">
               Binários:
@@ -29,7 +47,11 @@
               <input id="inputDecimais" type="number" name="inputDecimais" disabled>
             </label>
           </Form>
-      </main>
+      </main> -->
+
+      <footer class="l-footer">
+        <h1>CONVERTER</h1>
+      </footer>
 
 </body>
 <script src="main.js"></script>
