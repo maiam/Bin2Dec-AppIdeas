@@ -18,6 +18,11 @@ body {
     background-color: #ECE5DD;
 }
 
+button:hover {
+    cursor: pointer;
+
+    box-shadow: 0 4px 4px black;
+}
 
 .l-header {
     width: 100%;
@@ -49,8 +54,8 @@ body {
 }
 
 .wrapper {
-    width: 35.2rem;
-    height: 53.3rem;
+    width: 35rem;
+    height: 58rem;
 
     background-color: #7CD0B8;
     border: 1px solid;
@@ -87,13 +92,14 @@ body {
 .wrapper-btn button {
     width: 11.193rem;
     height: 11.429rem;
-    margin-top: 3.6rem;
+    margin-top: 1.6rem;
     margin-bottom: 3.6rem;
     margin-left: 1rem;
     margin-right: 1rem;
 
     background-color: #F7F9F9;
     border-color: #fff;
+    border-radius: 5px;
     font-size: 4rem;
 }
 
@@ -102,7 +108,20 @@ body {
     font-weight: bold;
 }
 
+.btn-converter {
+    width: 20rem;
+    height: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 3.6rem;
 
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #D9EFE9;
+
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #D9EFE9;
+}
 
 
 /* 
