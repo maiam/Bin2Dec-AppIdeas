@@ -1,11 +1,30 @@
-const inputBinarios = document.getElementById('inputBinarios');
-const inputDecimais = document.getElementById('inputDecimais');
-const btn = document.getElementById('btnConvert');
-const mensagem = document.getElementById('mensagem-erro');
+const inputBinarios = document.getElementById('input-binario');
+const inputDecimais = document.getElementById('input-decimal');
+const btn = document.getElementById('btn-converter');
+const btnZero = document.getElementById('btn-zero');
+const btnOne = document.getElementById('btn-one');
 
-// function converteNumero {
 
-// }
+btnZero.addEventListener("click", function(){
+    if(inputDecimais.value==0){
+        inputBinarios.value += 0;
+    } else { 
+        inputBinarios.value = 0;
+        inputDecimais.value = "";
+    }
+
+});
+
+btnOne.addEventListener("click", function(){
+    if(inputDecimais.value==0){
+        inputBinarios.value += 1;
+    } else { 
+        inputBinarios.value = 1;
+        inputDecimais.value = "";
+    }
+});
+
+
 
 function verificaBinarios() {
 
@@ -29,12 +48,11 @@ function converteBinario() {
 btn.addEventListener('click', function() {
 
     if (verificaBinarios()){
-        mensagem.classList.remove('on');
-        // inputBinarios.classList.remove('error');
+        // mensagem.classList.remove('on');
+        
         inputDecimais.value = converteBinario();
     } else {
         mensagem.classList.add('on');
-        // inputBinarios.classList.add('error');
         inputDecimais.value = "";
     }
     
