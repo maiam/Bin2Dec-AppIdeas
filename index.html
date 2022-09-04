@@ -17,12 +17,13 @@
       </header>
 
 
-      <div class="l-main">
+      <main class="l-main">
         <div class="wrapper">
-            <label for="binario">
+            <label for="binario" class="l-binario">
                     Binário
-                    <input type="text" name="binario" id="input-binario" disabled>
-            </label>
+                    <input type="text" name="binario" id="input-binario">
+                    <h4 class="__wrapper-tag bin">Digite apenas 0 ou 1.</h4>
+                  </label>
             <div class="wrapper-btn">
                 <button type="button" id="btn-zero">0</button>
                 <button type="button" id="btn-one">1</button>    
@@ -30,25 +31,12 @@
             <label for="decimal">
                 Decimal
                 <input type="text" name="decimal" id="input-decimal" disabled>
-            </label>
-            <button type="button" class="btn-converter" id="btn-converter">CONVERTER</button>
+                <h4 class="__wrapper-tag dec">Digite apenas números.</h4>
+              </label>
+            <button type="button" class="btn-converter" id="btn-convert">Convert</button>
+            <button type="button" class="btn-converter" id="btn-reset">Reset</button>
           </div>    
-      </div>
-
-      <!-- <main class="">
-          <Form class="form">
-            <label for="inputBinarios">
-              Binários:
-              <input id="inputBinarios" class="" type="number" name="inputBinarios" placeholder="apenas 0 e 1">
-              <span id="mensagem-erro" class="mensagem error">Números precisam ser 0 ou 1</span>
-            </label>
-            <button id="btnConvert" type="button"><i class="fa-solid fa-play"></i></button>
-            <label for="inputNumbers">
-              Decimais:
-              <input id="inputDecimais" type="number" name="inputDecimais" disabled>
-            </label>
-          </Form>
-      </main> -->
+        </main>
 
       <footer class="l-footer">
         <p>Copyright © 2022 MaiaM. Todos os direitos reservados. </p>   
