@@ -9,3 +9,4 @@ Visite a pagina do meu projeto pronto:
 
 https://maiam.github.io/Bin2Dec-AppIdeas/
 
+Copyright Maiam 2022 
