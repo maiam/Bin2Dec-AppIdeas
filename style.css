@@ -28,7 +28,8 @@ button:hover {
 .l-header {
     width: 100%;
     height: 10rem;
-    background-color: #E0D0C1;
+    background-color: #00A676;
+    opacity: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +49,7 @@ button:hover {
 .l-main {
     width: 100%;
     /* height: 64.4rem; */
-    height: 293.2rem;
+    height: 153.2rem;
     
     display: flex;
     flex-direction: column;
@@ -132,8 +133,8 @@ button:hover {
 
 
 .l-footer{
-    position: sticky;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
     height: 10rem;
     background-color: #00A676;
@@ -196,7 +197,7 @@ button:hover {
 .l-article {
     width: 100%;
     height: auto;
-    margin-top: 100rem;
+    margin-top: 5rem;
 
     display: flex;
     align-items: center;
@@ -214,9 +215,6 @@ button:hover {
     border-radius: 10px;
     border-color: #7CD0B8;
 }
-
-
-
 
 .l-article .__item h2{
     font-size: 2rem;
