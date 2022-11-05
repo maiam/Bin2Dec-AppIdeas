@@ -1,12 +1,23 @@
 # Bin2Dec-AppIdeas
- treinando desenvolvimento de apps
+ 
 
-Ideia de projeto retirada do repositório:
-Projects/1-Beginner/Bin2Dec-App.md
+Com este projeto inicio o treinamento proposto por [Florin Pop](http://www.florin-pop.com/) em [App-Ideas](https://github.com/florinpop17/app-ideas).
 
 
-Visite a pagina do meu projeto pronto:
 
-https://maiam.github.io/Bin2Dec-AppIdeas/
+A ideia para este projeto encontra-se no repositório: 
 
-Copyright Maiam 2022 
+
+
+## **Tier-1: Beginner Projects**
+
+| Name | Short Description | Tier |
+| ---- |:----------:| ----:|
+|Bin2Dec |Binary-to-Decimal number converter |	1-Beginner|
+
+
+## Visite a pagina do meu projeto pronto:
+
+[Bin2Dec](https://maiam.github.io/Bin2Dec-AppIdeas/)
+
+Copyright @Maiam 2022 
