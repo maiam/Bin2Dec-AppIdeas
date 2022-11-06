@@ -46,3 +46,10 @@ btnEl.addEventListener('click', (e) => {
     e.preventDefault()
     convertTo(selectEl.value, inputEl.value)
 })
+
+
+$(document).ready(function() {
+  $('[data-toggle="popover"').popover({
+    container: 'body'
+  });
+});
