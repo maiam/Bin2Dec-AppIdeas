@@ -1,75 +1,317 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/svg+xml" href="mont-icon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale-1.0, user-scalable=0">
-  <title>Bin2Dec</title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="conversor binario decimal" />
+    <meta name="description" content="conversor de numeros binarios para decimais vice-versa" />
+    <meta name="author" content="Pedro Sergio Maia Monteiro" />
 
-  <!-- FONT AWESOME  -->
-    <script src="https://kit.fontawesome.com/17575dd2f5.js" crossorigin="anonymous"></script>
-  
-  <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-    <header class="l-header">
-        <h1>Bin2Dec</h1>
+    <title>Bin2Dec</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- progress barstle -->
+    <link rel="stylesheet" href="css/css-circular-prog-bar.css" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font wesome stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/css-circular-prog-bar.css" />
+  </head>
+
+  <body>
+    <div class="top_container">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                <img src="mont-icon.svg" alt="" />
+                Mont
+              </span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div
+                class="d-flex ml-auto flex-column flex-lg-row align-items-center"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                      Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about"> Sobre </a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contato</a>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
       </header>
 
-
-      <main class="l-main">
-        <div class="wrapper">
-            <label for="binario" class="l-binario">
-                    Binário
-                    <input type="text" name="binario" id="input-binario">
-                    <h4 class="__wrapper-tag bin">Digite apenas 0 ou 1.</h4>
-                  </label>
-            <div class="wrapper-btn">
-                <button type="button" id="btn-zero">0</button>
-                <button type="button" id="btn-one">1</button>    
+      <section class="hero_section">
+        <div class="hero-container container">
+          <div class="hero_detail-box">
+            <h1>Bin2Dec</h1>
+            <p>
+              Com este projeto inicio o treinamento proposto por
+              <em><a href="http://www.florin-pop.com/"> Florin Pop </a></em> em
+              <b
+                ><a href="https://github.com/florinpop17/app-ideas"
+                  >App-Ideas</a
+                ></b
+              >.
+            </p>
+            <div class="hero_btn-continer">
+              <a
+                href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md"
+                class="call_to-btn btn_white-border"
+              >
+                Saiba mais
+              </a>
             </div>
-            <label for="decimal">
-                Decimal
-                <input type="text" name="decimal" id="input-decimal" disabled>
-                <h4 class="__wrapper-tag dec">Digite apenas números.</h4>
-              </label>
-            <button type="button" class="btn-converter" id="btn-convert">Convert</button>
-            <button type="button" class="btn-converter" id="btn-reset">Reset</button>
-          </div>   
-          
-          
-          <article class="l-article">
-            <div class="wrapper-article">
-              <div class="__item">
-                <h2>Conversão de binário para decimal
-                </h2>
-                <p>A conversão de números da base 2 para base 10 é bastante simples. Basta reescrever o número numa expansão de base 2, conforme o exemplo abaixo.</p>
-                <p>(0110)2 = 0(3)1(2)1(1)0(0)</p>
-                <p>0*2³ + 1*2² + 1*2¹ + 0*20 = 0 + 1*4 + 1*2 + 0 = 4 + 2 = (6)10
-                </p>
+          </div>
+          <div class="container pb-4">
+            <div class="card border-light w-90 text-center">
+              <div class="card-header">
+                Convert Binary to Decimal
               </div>
-              <hr>
-              <div class="__item">
-                <h2>Sistemas de numeração 
-                </h2>
-                <p>Um sistema de numeração é um conjunto de princípios constituindo o artifício lógico de classificação em grupos e subgrupos das unidades que formam os números. A base de um sistema de numeração é uma certa quantidade de unidades que deve constituir uma unidade de ordem imediatamente superior. Os sistemas de numeração tem seu nome derivado da sua base, ou seja, o sistema binário tem base dois, o sistema septimal tem base sete e o decimal tem base dez.</p>                
-                <p>O sistema binário ou de base 2 é um sistema de numeração posicional em que todas as quantidades se representam com base em dois números, ou seja, zero e um (0 e 1).
-                  O sistema binário é base para a Álgebra booliana (de George Boole — matemático inglês), que permite fazer operações lógicas e aritméticas usando-se apenas dois dígitos ou dois estados (sim ou não, verdadeiro ou falso, tudo ou nada, ligado ou desligado, 1 ou 0).
-                  (<a href="https://pt.m.wikipedia.org/wiki/Conversão_de_base_numérica#Conversão_de_decimal_para_binário
-                  ">Wikipedia</a>)  
-                </p>
-              </div>        
+              <div class="card-body">
+                <form>
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="input" class="sr-only"></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="input"
+                      placeholder="000"
+                    />
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2 text-left">
+                    <label for="formControlSelect">Converter para</label>
+                    <select class="form-control" id="formControlSelect">
+                      <option>Decimal</option>
+                      <!-- <option>Binary</option> -->
+                    </select>
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="output" class="sr-only"></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="output"
+                      placeholder="000"
+                      readonly
+                    />
+                  </div>
+                  <div class="row">
+                    <div class="col align-self-end">
+                      <button type="submit" class="btn btn-primary" data-btn="" id="btn-submit">Converter</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-          </article>
-        </main>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- end header section -->
 
+    <div class="common_style">
+      <!-- about section -->
+      <section class="about_section text-left" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="about_detail-box">
+                <h3>Sobre o conversor</h3>
+                <h4>Conversão de binário para decimal</h4>
+                <p>
+                  A conversão de números da base 2 para base 10 é bastante
+                  simples. Basta reescrever o número numa expansão de base 2,
+                  conforme o exemplo abaixo:
+                  <br />
+                  (0110)2 = 0(3)1(2)1(1)0(0)
+                  <br />
+                  0*2³ + 1*2² + 1*2¹ + 0*20 = 0 + 1*4 + 1*2 + 0 = 4 + 2 = (6)10
+                </p>
+                <h4>Conversão de decimal para binário</h4>
+                <p>
+                  A técnica de divisões sucessivas é utilizada para conversão de
+                  números inteiros do sistema decimal para o binário.
+                  <br />
+                  Para a conversão de números fracionários, é utilizada a
+                  técnica de multiplicações sucessivas, no entanto, a parte
+                  inteira do número ainda é convertida pelo método das divisões
+                  sucessivas.
+                </p>
+                <h4>Sistemas de numeração</h4>
+                <p>
+                  Um sistema de numeração é um conjunto de princípios
+                  constituindo o artifício lógico de classificação em grupos e
+                  subgrupos das unidades que formam os números. A base de um
+                  sistema de numeração é uma certa quantidade de unidades que
+                  deve constituir uma unidade de ordem imediatamente superior.
+                  Os sistemas de numeração tem seu nome derivado da sua base, ou
+                  seja, o sistema binário tem base dois, o sistema septimal tem
+                  base sete e o decimal tem base dez.
+                </p>
+                <p>
+                  O sistema binário ou de base 2 é um sistema de numeração
+                  posicional em que todas as quantidades se representam com base
+                  em dois números, ou seja, zero e um (0 e 1). O sistema binário
+                  é base para a Álgebra booliana (de George Boole — matemático
+                  inglês), que permite fazer operações lógicas e aritméticas
+                  usando-se apenas dois dígitos ou dois estados (sim ou não,
+                  verdadeiro ou falso, tudo ou nada, ligado ou desligado, 1 ou
+                  0).
+                </p>
 
-      <footer class="l-footer">
-        <p>Copyright © 2022 MaiaM. Todos os direitos reservados. </p>   
-    </footer>
+                <div class="">
+                  <a
+                    href="https://pt.m.wikipedia.org/wiki/Conversão_de_base_numérica#Conversão_de_decimal_para_binário"
+                    class="call_to-btn btn_white-border"
+                  >
+                    Saiba mais
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</body>
-<script src="main.js"></script>
+      <!-- end about section -->
+    </div>
+
+    <!-- contact section -->
+    <!-- <section class="contact_section" id="contact">
+      <div class="container">
+        <div class="row pb-4">
+          <div class="col">
+            <div class="d-flex justify-content-center d-md-block">
+              <h2>Contato</h2>
+            </div>
+            <form action="">
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <input type="text" placeholder="Nome" />
+                  </div>
+                  <div>
+                    <input type="email" placeholder="E-mail" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Celular" />
+                  </div>
+                  <div class="mt-5">
+                    <input type="text" placeholder="Mensagem" />
+                  </div>
+                  <div class="mt-5">
+                    <button type="submit">enviar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- end contact section -->
+
+    <section class="info_section layout_padding-top">
+      <div class="info_logo-box">
+        <h2>Mont</h2>
+      </div>
+      <div class="container layout_padding2">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Sobre mim</h5>
+            <p>
+              Sempre fui um amante de tecnologia. A vida me levou a trilhar
+              caminhos muito diferentes dos meus sonhos, mas nem por isso deixei
+              de sonhar!
+            </p>
+          </div>
+          <!-- <div class="col-md-6">
+            <h5>Contato</h5>
+            <p>
+              Entre em contato se tiver alguma dúvida. Será um prazer te
+              escrever de volta.
+            </p>
+          </div> -->
+        </div>
+      </div>
+      <div class="container">
+        <div class="social_container">
+          <div class="social-box">
+            <a href="">
+              <img src="images/fb.png" alt="" />
+            </a>
+            <a href="">
+              <img src="images/twitter.png" alt="" />
+            </a>
+            <a href="">
+              <img src="images/linkedin.png" alt="" />
+            </a>
+            <a href="">
+              <img src="images/instagram.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+      <p>
+        Copyright &copy; 2019 All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+    </script>
+  </body>
 </html>
