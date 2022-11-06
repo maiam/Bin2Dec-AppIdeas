@@ -42,6 +42,7 @@ function convertTo(opt, num) {
     }
 }
 
-btnEl.addEventListener('click', () => {
+btnEl.addEventListener('click', (e) => {
+    e.preventDefault()
     convertTo(selectEl.value, inputEl.value)
 })
