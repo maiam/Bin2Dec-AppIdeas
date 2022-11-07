@@ -129,11 +129,15 @@
                       id="input"
                       placeholder="000"
                       data-container="body"
-                      data-toggle="popover"
+                      data-toggle=""
                       data-placement="top"
                       data-content="Apenas 0 e 1 são aceitos."
                       data-input=""
+                      required
                     />
+                    <small id="passwordHelpBlockInput" class="form-text text-muted">
+                      São aceitos apenas os números 0 e 1.
+                    </small>
                   </div>
                   <div class="form-group mb-2 text-left">
                     <div class="row align-items-center">
@@ -153,18 +157,24 @@
                       id="output"
                       placeholder="000"
                       data-container="body"
-                      data-toggle="popover"
+                      data-toggle=""
                       data-placement="top"
                       data-content="Apenas números inteiros entre 0 e 9 são aceitos."
                       data-output=""
                     />
+                    <small id="passwordHelpBlockOutput" class="form-text text-muted">
+                      São aceitos apenas os números inteiros entre 0 e 9.
+                    </small>
                   </div>
                   <div class="row pt-2">
                     <div class="col">
                       <button type="button" class="btn btn-secondary"><i class="fa-solid fa-trash px-4"></i></button>
                     </div>
                     <div class="col">
-                      <button type="button" class="btn btn-secondary"><i class="fa-solid fa-repeat px-4" data-verified="0"></i></button>
+                      <button type="button" class="btn btn-secondary" data-container="body"
+                      data-toggle="popover"
+                      data-placement="top"
+                      data-content="Em construção"><i class="fa-solid fa-repeat px-4" data-verified="0"></i></button>
                     </div>
                     <div class="col">
                       <button type="submit" class="btn btn-secondary" data-btn="" id="btn-submit"><i class="fa-solid fa-check px-4"></i></button>

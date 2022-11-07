@@ -38,37 +38,53 @@ function convertTo(opt, num) {
         console.log(isDecimal(num))
     }
     if(opt == 'Decimal') {
-        if(!isBinary(num))return
+        if(!isBinary(num)){
+          inputEl.classList.remove('is-valid')
+          inputEl.classList.add('is-invalid')
+          return
+        }
+        inputEl.classList.remove('is-invalid')
+        inputEl.classList.add('is-valid')
         outputEl.value = convertBinaryToDecimal(num)
 
     }
 }
 
 function switchInputs () {
-  const labelInput = document.querySelector('[data-label-input]')
-  const labelOutput = document.querySelector('[data-label-output]')
-  const divCardHeaderText = document.querySelector('.card-header')
+
+  //FUNCIONALIDADE EM CONSTRUÇÃO
+  // const labelInput = document.querySelector('[data-label-input]')
+  // const labelOutput = document.querySelector('[data-label-output]')
+  // const divCardHeaderText = document.querySelector('.card-header')
+  // const smallInput = document.querySelector('#passwordHelpBlockInput')
+  // const smallOutput = document.querySelector('#passwordHelpBlockOutput')
   
-  if(switchEl.getAttribute('data-verified') == '0'){
-    divCardHeaderText.innerText = 'Converte Decimal para Binário'
-    switchEl.setAttribute('data-verified', '1')
-    labelInput.innerText = "Decimal:"
-    labelOutput.innerText = "Binário:"
-    inputEl.setAttribute('data-input', inputEl.value)
-    outputEl.setAttribute('data-output', outputEl.value)
-    inputEl.value = outputEl.getAttribute('data-output')
-    outputEl.value = inputEl.getAttribute('data-input')
+  // if(switchEl.getAttribute('data-verified') == '0'){
+  //   divCardHeaderText.innerText = 'Converte Decimal para Binário'
+  //   switchEl.setAttribute('data-verified', '1')
+  //   labelInput.innerText = "Decimal:"
+  //   labelOutput.innerText = "Binário:"
+  //   inputEl.setAttribute('data-input', inputEl.value)
+  //   outputEl.setAttribute('data-output', outputEl.value)
+  //   inputEl.value = outputEl.getAttribute('data-output')
+  //   outputEl.value = inputEl.getAttribute('data-input')
+  //   smallInput.innerText = 'São aceitos apenas os números inteiros entre 0 e 9.'
+  //   smallOutput.innerText = 'São aceitos apenas os números 0 e 1.'
+
     
-  } else {
-    divCardHeaderText.innerText = 'Converte Binário para Decimal'
-    switchEl.setAttribute('data-verified', '0')
-    labelInput.innerText = "Binário:"
-    labelOutput.innerText = "Decimal:"  
-    inputEl.setAttribute('data-input', inputEl.value)
-    outputEl.setAttribute('data-output', outputEl.value)
-    inputEl.value = outputEl.getAttribute('data-output')
-    outputEl.value = inputEl.getAttribute('data-input')
-  }
+  // } else {
+  //   divCardHeaderText.innerText = 'Converte Binário para Decimal'
+  //   switchEl.setAttribute('data-verified', '0')
+  //   labelInput.innerText = "Binário:"
+  //   labelOutput.innerText = "Decimal:"  
+  //   inputEl.setAttribute('data-input', inputEl.value)
+  //   outputEl.setAttribute('data-output', outputEl.value)
+  //   inputEl.value = outputEl.getAttribute('data-output')
+  //   outputEl.value = inputEl.getAttribute('data-input')
+  //   smallInput.innerText = 'São aceitos apenas os números 0 e 1.'
+  //   smallOutput.innerText = 'São aceitos apenas os números inteiros entre 0 e 9.'
+
+  // }
 
 }
 
@@ -78,9 +94,11 @@ function clearAll() {
 
     inputEl.value = ''
     outputEl.value = ''
+    inputEl.classList.remove('is-invalid')
+    inputEl.classList.remove('is-valid')
 }
 
-btnEl.addEventListener('click', (e) => {
+inputEl.addEventListener('input', (e) => {
     e.preventDefault()
     convertTo("Decimal", inputEl.value)
 })
