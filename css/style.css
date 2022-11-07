@@ -217,6 +217,10 @@ a:focus {
   margin-bottom: 35px;
 }
 
+.hero_btn-container a {
+  background-color: #6ebca8;
+  color: #fefeff;
+}
 
 /* end hero section */
 
