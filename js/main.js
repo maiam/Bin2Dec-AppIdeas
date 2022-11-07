@@ -47,8 +47,10 @@ function convertTo(opt, num) {
 function switchInputs () {
   const labelInput = document.querySelector('[data-label-input]')
   const labelOutput = document.querySelector('[data-label-output]')
+  const divCardHeaderText = document.querySelector('.card-header')
   
   if(switchEl.getAttribute('data-verified') == '0'){
+    divCardHeaderText.innerText = 'Converte Decimal para Binário'
     switchEl.setAttribute('data-verified', '1')
     labelInput.innerText = "Decimal:"
     labelOutput.innerText = "Binário:"
@@ -58,6 +60,7 @@ function switchInputs () {
     outputEl.value = inputEl.getAttribute('data-input')
     
   } else {
+    divCardHeaderText.innerText = 'Converte Binário para Decimal'
     switchEl.setAttribute('data-verified', '0')
     labelInput.innerText = "Binário:"
     labelOutput.innerText = "Decimal:"  
