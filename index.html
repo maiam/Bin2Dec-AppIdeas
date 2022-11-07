@@ -26,10 +26,7 @@
       rel="stylesheet"
     />
     <!-- font wesome stylesheet -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -110,12 +107,22 @@
           <div class="container pb-4">
             <div class="card border-light w-90 text-center">
               <div class="card-header">
-                Convert Binary to Decimal
+                Converte Binário para Decimal
               </div>
               <div class="card-body">
                 <form>
-                  <div class="form-group mx-sm-3 mb-2">
-                    <label for="input" class="sr-only"></label>
+                  <div class="form-group mb-2 text-left">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <label for="input" class="" data-label-input="">Binário:</label>
+                      </div>
+                      <div class="col-10">
+                        <!-- <select class="form-control mb-2" id="formControlSelectInput">
+                          <option>Binário</option> -->
+                          <!-- <option>Binary</option> -->
+                        </select>    
+                      </div>
+                    </div>
                     <input
                       type="text"
                       class="form-control"
@@ -124,29 +131,43 @@
                       data-container="body"
                       data-toggle="popover"
                       data-placement="top"
-                      data-content="Digite apenas 0 ou 1"
+                      data-content="Apenas 0 e 1 são aceitos."
+                      data-input=""
                     />
                   </div>
-                  <div class="form-group mx-sm-3 mb-2 text-left">
-                    <label for="formControlSelect">Converter para</label>
-                    <select class="form-control" id="formControlSelect">
-                      <option>Decimal</option>
-                      <!-- <option>Binary</option> -->
-                    </select>
-                  </div>
-                  <div class="form-group mx-sm-3 mb-2">
-                    <label for="output" class="sr-only"></label>
+                  <div class="form-group mb-2 text-left">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <label for="output" class="" data-label-output="">Decimal:</label>
+                      </div>
+                      <div class="col-10">
+                        <!-- <select class="form-control mb-2" id="formControlSelectOutput">
+                          <option>Decimal</option> -->
+                          <!-- <option>Binary</option> -->
+                        </select>    
+                      </div>
+                    </div>
                     <input
                       type="text"
                       class="form-control"
                       id="output"
                       placeholder="000"
-                      readonly
+                      data-container="body"
+                      data-toggle="popover"
+                      data-placement="top"
+                      data-content="Apenas números inteiros entre 0 e 9 são aceitos."
+                      data-output=""
                     />
                   </div>
-                  <div class="row">
-                    <div class="col align-self-end">
-                      <button type="submit" class="btn btn-primary" data-btn="" id="btn-submit">Converter</button>
+                  <div class="row pt-2">
+                    <div class="col">
+                      <button type="button" class="btn btn-secondary"><i class="fa-solid fa-trash px-4"></i></button>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-secondary"><i class="fa-solid fa-repeat px-4" data-verified="0"></i></button>
+                    </div>
+                    <div class="col">
+                      <button type="submit" class="btn btn-secondary" data-btn="" id="btn-submit"><i class="fa-solid fa-check px-4"></i></button>
                     </div>
                   </div>
                 </form>

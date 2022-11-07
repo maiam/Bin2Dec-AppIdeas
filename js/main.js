@@ -1,8 +1,10 @@
 
 const inputEl = document.querySelector('#input')
 const outputEl = document.querySelector('#output')
-const selectEl = document.querySelector('#formControlSelect')
+const selectEl = document.querySelector('#formControlSelectInput')
+const switchEl = document.querySelector('[data-verified]')
 const btnEl = document.querySelector('#btn-submit')
+const trashBtnEl = document.querySelector('.fa-trash')
 
 function isBinary(bin) {
     let binary = bin;
@@ -42,11 +44,46 @@ function convertTo(opt, num) {
     }
 }
 
+function switchInputs () {
+  const labelInput = document.querySelector('[data-label-input]')
+  const labelOutput = document.querySelector('[data-label-output]')
+  
+  if(switchEl.getAttribute('data-verified') == '0'){
+    switchEl.setAttribute('data-verified', '1')
+    labelInput.innerText = "Decimal:"
+    labelOutput.innerText = "Binário:"
+    inputEl.setAttribute('data-input', inputEl.value)
+    outputEl.setAttribute('data-output', outputEl.value)
+    inputEl.value = outputEl.getAttribute('data-output')
+    outputEl.value = inputEl.getAttribute('data-input')
+    
+  } else {
+    switchEl.setAttribute('data-verified', '0')
+    labelInput.innerText = "Binário:"
+    labelOutput.innerText = "Decimal:"  
+    inputEl.setAttribute('data-input', inputEl.value)
+    outputEl.setAttribute('data-output', outputEl.value)
+    inputEl.value = outputEl.getAttribute('data-output')
+    outputEl.value = inputEl.getAttribute('data-input')
+  }
+
+}
+
+function clearAll() {
+    inputEl.setAttribute('data-input', '')
+    outputEl.setAttribute('data-output','')
+
+    inputEl.value = ''
+    outputEl.value = ''
+}
+
 btnEl.addEventListener('click', (e) => {
     e.preventDefault()
-    convertTo(selectEl.value, inputEl.value)
+    convertTo("Decimal", inputEl.value)
 })
 
+switchEl.addEventListener('click', switchInputs)
+trashBtnEl.addEventListener('click', clearAll)
 
 $(document).ready(function() {
   $('[data-toggle="popover"').popover({
