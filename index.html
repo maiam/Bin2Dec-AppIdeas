@@ -72,9 +72,6 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#about"> Sobre </a>
                   </li>
-                  <!-- <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contato</a>
-                  </li> -->
                 </ul>
               </div>
             </div>
@@ -116,12 +113,6 @@
                       <div class="col-2">
                         <label for="input" class="" data-label-input="">Binário:</label>
                       </div>
-                      <div class="col-10">
-                        <!-- <select class="form-control mb-2" id="formControlSelectInput">
-                          <option>Binário</option> -->
-                          <!-- <option>Binary</option> -->
-                        </select>    
-                      </div>
                     </div>
                     <input
                       type="text"
@@ -133,6 +124,7 @@
                       data-placement="top"
                       data-content="Apenas 0 e 1 são aceitos."
                       data-input=""
+                      maxlength="8"
                       required
                     />
                     <small id="passwordHelpBlockInput" class="form-text text-muted">
@@ -161,6 +153,8 @@
                       data-placement="top"
                       data-content="Apenas números inteiros entre 0 e 9 são aceitos."
                       data-output=""
+                      maxlength="8"
+                      required
                     />
                     <small id="passwordHelpBlockOutput" class="form-text text-muted">
                       São aceitos apenas os números inteiros entre 0 e 9.
@@ -171,10 +165,7 @@
                       <button type="button" class="btn btn-secondary"><i class="fa-solid fa-trash px-3"></i></button>
                     </div>
                     <div class="col">
-                      <button type="button" class="btn btn-secondary" data-container="body"
-                      data-toggle="popover"
-                      data-placement="top"
-                      data-content="Em construção"><i class="fa-solid fa-repeat px-3" data-verified="0"></i></button>
+                      <button type="button" class="btn btn-secondary" data-container="body"><i class="fa-solid fa-repeat px-3" data-verified="0"></i></button>
                     </div>
                     <div class="col">
                       <button type="button" class="btn btn-secondary" data-btn="" id="btn-submit"><i class="fa-solid fa-check px-3"></i></button>
